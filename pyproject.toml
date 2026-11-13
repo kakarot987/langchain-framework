@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "docqa-lab"
+version = "0.1.0"
+description = "A focused LangChain RAG and bounded tool-calling lab for Markdown project documentation"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+  "langchain-core>=1.0,<2.0",
+  "langchain-text-splitters>=1.0,<2.0",
+  "langchain-openai>=1.0,<2.0",
+  "numpy>=1.26,<3",
+  "pydantic>=2.0,<3.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8,<10", "ruff>=0.8,<1"]
+
+[project.scripts]
+docqa = "docqa_lab.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "I"]

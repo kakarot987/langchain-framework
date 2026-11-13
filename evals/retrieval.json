@@ -1,0 +1,7 @@
+[
+  {"question": "How do I run unit tests locally with pytest?", "expected_source": "setup.md"},
+  {"question": "What is the CLI interface to ask a question?", "expected_source": "api.md"},
+  {"question": "How do we rollback a release regression?", "expected_source": "release.md"},
+  {"question": "Which tool reads a document by exact filename?", "expected_source": "api.md"},
+  {"question": "Where do I set my OPENAI_API_KEY credentials?", "expected_source": "setup.md"}
+]

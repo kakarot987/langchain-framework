@@ -1,0 +1,14 @@
+services:
+  docqa:
+    build: .
+    env_file:
+      - path: .env
+        required: false
+    environment:
+      DOCQA_DOCS: /app/docs/sample
+    command: ["demo"]
+    read_only: true
+    security_opt:
+      - no-new-privileges:true
+    cap_drop:
+      - ALL
